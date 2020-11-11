@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>IHMDB</title>
+</head>
+
+<body>
+   <h1>THIS IS MY MOVIE DB</h1>
+
+   {{movies.1.title}}
+
+   {{#each movies}}
+   <div>{{title}}</div>
+   <div>{{plot}}</div>
+
+
+
+   {{> movieCard this}}
+
+
+   {{/each}}
+
+   {{isArrayOfMovies}}
+
+   {{#if isStudent}}
+   <div>
+
+      Welcome to class
+   </div>
+   {{/if}}
+
+   {{#if isStudent}}
+   Goodbye
+   {{else}}
+   <h1>
+
+      hello
+   </h1>
+   {{/if}}
+
+   {{#unless isStudent}}
+   <div>You are not a student</div>
+   {{/unless}}
+
+   {{#unless hobbies}}
+   You should get out more
+   {{/unless}}
+
+
+</body>
+
+</html>
