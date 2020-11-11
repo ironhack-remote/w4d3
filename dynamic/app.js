@@ -17,6 +17,14 @@ app.get("/", (req, res) => {
   res.render("index", { user });
 });
 
+app.get("/about", (request, response) => {
+  response.render("about");
+});
+
+app.get("/works", (request, response) => {
+  response.render("works");
+});
+
 app.listen(3000, () => {
   console.log("LISTENING ON PORT 3000");
 });
