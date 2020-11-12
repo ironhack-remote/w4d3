@@ -5,7 +5,7 @@ const moviesJson = require("./movies.json");
 const app = express();
 
 app.set("view engine", "hbs");
-
+app.use(express.static("public"));
 hbs.registerPartials(__dirname + "/views/partials");
 
 app.get("/", (req, res) =>
@@ -16,5 +16,10 @@ app.get("/", (req, res) =>
     hobbies: [],
   })
 );
+
+app.get("/shawshank", (req, res) => {
+  //   console.log(moviesJson[0]);
+  res.render("something", { movie: moviesJson[0] });
+});
 
 app.listen(3001, () => console.log(`LISTENING ON PORT 3001`));

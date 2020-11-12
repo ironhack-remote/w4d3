@@ -1,27 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>IHMDB</title>
-</head>
-
-
 {{!-- {{> movieCard this}} --}}
 
-<body>
 
-   <h1>Hello</h1>
-
-
-   {{#each movies}}
-   <h1>{{title}}</h1>
-   <h5>{{this.plot}}</h5>
-   {{> movieCard this}}
-   {{/each}}
+<h1>Hello</h1>
 
 
+{{#each movies}}
+{{!-- <h1>{{title}}</h1> --}}
+{{!-- <h5>{{this.plot}}</h5> --}}
+{{> movieCard this}}
+{{/each}}
+
+{{!-- 
    <h1>THIS IS MY MOVIE DB</h1>
 
    {{movies.1.title}}
@@ -56,8 +45,8 @@
    {{#unless hobbies}}
    You should get out more
    {{/unless}}
+ --}}
 
+{{!-- </body> --}}
 
-</body>
-
-</html>
+{{!-- </html> --}}
